@@ -1,0 +1,104 @@
+{
+  "provinces" : [
+    {
+      "name" : "North Wales",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Central Wales",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "South Wales",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Orkney",
+      "paths" : [
+
+      ]
+    },
+    {
+      "name" : "North Caledonia",
+      "paths" : [
+
+      ]
+    },
+    {
+      "name" : "Central Caledonia",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "South Caledonia",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Cornwall",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Devon",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Anglia",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Kent",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Mercia",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Lancaster",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Northumberland",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "York",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "Isle of Man",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "North Ireland",
+      "paths" : [
+      ]
+    },
+    {
+      "name" : "South Ireland",
+      "paths" : [
+
+      ]
+    },
+    {
+      "name" : "",
+      "paths" : [
+
+      ]
+    }
+  ]
+
+}
