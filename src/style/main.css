@@ -1,120 +1,158 @@
 body {
   font-family: 'comic-sans ms', 'futura', 'ubuntu', 'sans-serif';
+  background-color: #c4aea0;
+  padding: 0;
+  margin: 0;
 }
 
-.modal_overlay {
-  position:fixed;
+#leftPanel {
+  display:inline-block;
+  vertical-align: top;
+  width:40%;
+  height:100vh;
+}
+#rightPanel {
+  display: inline-block;
+  vertical-align: top;
+  width:60%;
+  position: relative;
+  height:100vh;
+}
+#questPanel {
+  display: none;
+  position:absolute;
   top:0;
   left:0;
-  width:100%;
-  height:100vh;
-  background-color:rgba(0,0,0,0.3);
-  background-size:cover;
-}
-.modal {
-  z-index: 10;
-  display: block;
-  top: 8vh;
-  left: calc(50% - 400px);
-  border: 1px solid;
-  border-color: darkslategrey;
-  background-color: lightslategrey;
-  position: fixed;
-  width: 800px;
-  max-height: 85vh;
-}
-
-.modal_title {
-  padding: 15px;
-  font-size: 20px;
-  border-bottom:1px solid darkslategrey;
-}
-.modal_image {
-  background-size: cover;
-  background-position: 50%;
-  width: 100%;
-  padding-top: 200px;
-  border-bottom:1px solid darkslategrey;
-}
-.modal_message {
-  padding: 15px;
-  max-height: calc(65vh - 50px - 217px - 30px);
-  overflow-y: auto;
-}
-.modal_choices {
-  display:block;
-  margin:0 auto;
-  padding:15px;
-  text-align: center;
-  max-height: 15vh;
-  overflow-y: auto;
-}
-.modal_choices .customChoice {
-
-}
-
-.btn {
-  display: inline-block;
-  box-sizing: border-box;
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-size:16px;
-  padding:0 25px;
-  line-height:28px;
-  border-radius:2px;
-  text-decoration:none;
-  border:0;
-  min-width:120px;
-  background:#A3A3B0;
-  height:28px;
-  cursor:pointer;
-  margin-bottom: 2px;
-  vertical-align:top;
-}
-.btn:hover {
-	background:#9292A0;
+  width:calc(100% - 40px);
+  height:calc(100vh - 40px);
+  padding:20px;
+  background-color: #666666;
 }
 #gamePanel {
   width:40%;
   display:inline-block;
+  vertical-align: top;
   background:#grey;
 }
-
+#roundTablePanel {
+  position:relative;
+  height:460px;
+  width:460px;
+}
 #roundTable {
+  position: absolute;
+  top:80px;
+  left:80px;
   width: 300px;
   height: 300px;
   border-radius: 150px;
-  background: url('../images/textures/granite.jpg') 50% 50%;
   background-size: cover;
+  background-color: #AAB;
+}
+
+#mapPanel {
+  width: calc(100% - 1px);
+  display: inline-block;
+  background: #666;
+  border-left: 1px solid #333;
+  padding: 20px 0;
+  height: calc(100vh - 40px);
+}
+#mapWrapper {
+  position: relative;
+  margin:0 auto;
+  width:900px;
+  height:530px;
+  border:1px solid #333;
+  background-image: url('../images/textures/paper.jpg');
+  background-position: 50%;
+}
+#map {
+  width:100%;
+  height:100%;
+  background-color:rgba(10, 50, 80, 0.7);
+}
+#territoryPanel {
+  margin:0 auto;
+  width:880px;
+  padding:10px;
+  height: calc(100vh - 530px - 20px - 40px);
+  background-color: #AAA;
+  border: 1px solid #333;
+  border-top: 0;
+  overflow-y: auto;
+}
+.questList {
+  padding: 15px;
+  border: 1px solid #999;
+}
+.roundTable_knight {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height:100px;
+}
+.roundTable_knight0 {
+  top:10px;
+  left:calc(50% - 50px);
+}
+.roundTable_knight1 {
+  top:calc(25% - 60px);
+  right:calc(25% - 60px);
+}
+.roundTable_knight2 {
+  top:calc(50% - 50px);
+  right:10px;
+}
+.roundTable_knight3 {
+  bottom:calc(25% - 60px);
+  right:calc(25% - 60px);
+}
+.roundTable_knight4 {
+  bottom:10px;
+  left:calc(50% - 50px);
+}
+.roundTable_knight5 {
+  bottom:calc(25% - 60px);
+  left:calc(25% - 60px);
+}
+.roundTable_knight6 {
+  top:calc(50% - 50px);
+  left:10px;
+}
+.roundTable_knight7 {
+  top:calc(25% - 60px);
+  left:calc(25% - 50px);
 }
 
 .knightPortrait {
+  display: inline-block;
   width: 60px;
   height: 60px;
   border: 1px solid #333;
   border-radius: 30px;
   overflow: hidden;
+  background-color: #AAA;
 }
 
 .knightPortrait img {
   width: 100%;
   height: 100%;
 }
-
-
-#mapPanel {
-  width:calc(60% - 2px);
-  display:inline-block;
-  background:#666;
-  border:1px solid #333;
-  padding:20px 0;
+.knightPortrait.disabled img {
+  opacity:0.4;
 }
 
-#map {
-  margin:0 auto;
-  width:900px;
-  height:530px;
-  border:1px solid #333;
-  background-color:#30557A;/* #16518C; */
+
+.knightPickerInput {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(25% - 32px);
+  margin:0 10px 0 0;
+  background-color: bisque;
+  padding: 10px;
+  border: 1px solid gray;
+}
+.knightPickerInputOpen {
+  background-color: #999;
 }
